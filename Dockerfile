@@ -126,7 +126,9 @@ ENV OPENSSL_DIR=/usr/local/musl/ \
     PKG_CONFIG_ALLOW_CROSS=true \
     PKG_CONFIG_ALL_STATIC=true \
     LIBZ_SYS_STATIC=1 \
-    TARGET=musl
+    TARGET=musl \
+    RUST_BACKTRACE=1 \
+	RUSTUP_HOME=/usr/local/rustup \
 
 # (Please feel free to submit pull requests for musl-libc builds of other C
 # libraries needed by the most popular and common Rust crates, to avoid
@@ -142,6 +144,3 @@ RUN cargo install -f cargo-audit && \
     rm -rf /home/rust/.cargo/registry/ && \
     rustup target add x86_64-unknown-linux-musl
 
-
-COPY entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
