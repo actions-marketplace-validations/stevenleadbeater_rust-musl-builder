@@ -1,6 +1,6 @@
 # GitHub Action for Rust and MUSL
 
-Action provides an environment with stable Rust 1.37, MUSL and x86_64-unknown-linux-musl target. This is based heavily off https://github.com/emk/rust-musl-builder. 
+Action provides an environment with stable Rust, MUSL and x86_64-unknown-linux-musl target. This is based heavily off https://github.com/emk/rust-musl-builder. 
 code for the base image from which the Dockerfile derives is here: https://github.com/stevenleadbeater/rust-musl-builder-base
 The following static binaries are compiled in to the base image as per the emk/rust-musl-builder repo
 

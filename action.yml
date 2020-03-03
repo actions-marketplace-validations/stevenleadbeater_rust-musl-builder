@@ -1,0 +1,11 @@
+name: "Rust MUSL static binary builder for Alpine"
+description: "Build a statically linked rust binary compatible with Alpine containers"
+author: "Steven Leadbeater <info@ledsysconsultancy.com>"
+
+branding:
+  icon: "anchor"
+  color: "blue"
+
+runs:
+  using: docker
+  image: docker://ledsys/rust-musl-builder:0.0.1
